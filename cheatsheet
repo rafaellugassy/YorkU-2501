@@ -1,0 +1,36 @@
+==, /=, >=, <=, <, >, .AND., .OR., .NOT.
+OPEN(UNIT=<INTEGER>, FILE=<STRING>)
+
+INTEGER ARR(20)  <-- array initialization example
+READ 200, ((TWODARR(I,J), J = 1,N),I=1,N)
+READ 200, (ARR(I), I=1,N)
+
+<----- EXAMPLE ----->
+PROGRAM PRINTFILE
+OPEN(UNIT = 1, FILE = "file.txt")
+CHAR LINE*100
+DO WHILE (1==1)
+	READ (1, 50, END=100) LINE
+	PRINT *, LINE
+50	FORMAT (A)
+END DO
+
+X IS SPACE
+A IS CHAR
+I IS INTEGER
+F IS FLOAT
+E IS EXP FORM
+
+100	CONTINUE
+PRINT *, LINE
+END PROGRAM
+
+DO I = 1,N
+	<LOOP STUFF>
+END DO
+
+DO I = 1,N
+	DO J = 1,N
+		READ *, A(I,J)
+	END DO
+END DO
